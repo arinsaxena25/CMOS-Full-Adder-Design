@@ -1,0 +1,2 @@
+it is recommended to use pins in design.
+testbenches and analysis should be done in a view separate from design view. (desgin_tb)
