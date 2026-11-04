@@ -38,9 +38,9 @@ The full adder accepts three one-bit inputs—`A`, `B`, and `C` (carry-in)—and
 
 The intermediate propagate/XOR term is:
 
-\[
+$$
 P = A \oplus B
-\]
+$$
 
 The sum output is:
 
