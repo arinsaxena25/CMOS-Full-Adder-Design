@@ -57,7 +57,7 @@ $$
 The carry equation can also be implemented with a 2:1 MUX:
 
 $$
-CARRY = \operatorname{MUX}(A,C,P)
+CARRY = \mathrm{MUX}(A,C,P)
 $$
 
 For the MUX convention used in the top-level schematic, `A` is selected when `P=0`, and `C` is selected when `P=1`. This is equivalent to the Boolean carry equation because:
