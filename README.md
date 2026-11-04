@@ -362,6 +362,5 @@ All figures are stored locally in the `images/` directory and referenced using r
 
 ## 11. Notes and Reproducibility
 
-- The report is based on the 16 schematic, symbol, testbench, and waveform images supplied for this project.
-- The project uses the GPDK 45 nm PDK with a supply voltage of 1.0 V, as specified for this design. All output waveforms were obtained through transient analysis with a simulation interval of 0–80 ns (stop time: 80 ns). Transistor dimensions, input-stimulus timing details, and numerical performance results are not established by the supplied screenshots; add those values from the actual Virtuoso schematics and simulation setup before presenting measured-performance claims.
-- To reproduce the project, open the corresponding Virtuoso library/cell views, check the design and testbench connections, and rerun the simulations using the original model files and testbench stimuli.
+- The project uses the GPDK 45 nm PDK with a supply voltage of 1.0 V, as specified for this design. All output waveforms were obtained through transient analysis with a simulation interval of 0–80 ns (stop time: 80 ns). 
+
