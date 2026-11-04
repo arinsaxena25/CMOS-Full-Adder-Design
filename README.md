@@ -44,21 +44,21 @@ $$
 
 The sum output is:
 
-\[
+$$
 \boxed{SUM = A \oplus B \oplus C = P \oplus C}
-\]
+$$
 
 The carry-out equation is:
 
-\[
+$$
 \boxed{CARRY = AB + PC = AB + C(A \oplus B)}
-\]
+$$
 
 The carry equation can also be implemented with a 2:1 MUX:
 
-\[
+$$
 CARRY = \operatorname{MUX}(A,C,P)
-\]
+$$
 
 For the MUX convention used in the top-level schematic, `A` is selected when `P=0`, and `C` is selected when `P=1`. This is equivalent to the Boolean carry equation because:
 - If `P=0`, then `A=B`, so the carry-out equals `A` (and also `B`).
@@ -102,9 +102,9 @@ The full-adder symbol exposes the three inputs and two outputs for convenient re
 
 The inverter produces the complement of its input:
 
-\[
+$$
 Y = \overline{A}
-\]
+$$
 
 A conventional CMOS inverter uses one PMOS pull-up transistor and one NMOS pull-down transistor. The PMOS is controlled by the input and connects the output toward the positive supply when the input is low. The NMOS connects the output toward ground when the input is high.
 
@@ -126,9 +126,9 @@ A conventional CMOS inverter uses one PMOS pull-up transistor and one NMOS pull-
 
 The NAND gate implements:
 
-\[
+$$
 Y = \overline{AB}
-\]
+$$
 
 In static CMOS logic, the pull-down network has two NMOS transistors in series, while the pull-up network has two PMOS transistors in parallel. The output is pulled low only when both inputs are high; otherwise, it is pulled high.
 
@@ -157,18 +157,27 @@ In static CMOS logic, the pull-down network has two NMOS transistors in series, 
 
 The XOR gate implements:
 
-\[
+$$
 Y = A \oplus B = \overline{A}B + A\overline{B}
-\]
+$$
 
 The supplied XOR schematic is built using four NAND-gate stages. A common NAND realization is:
 
-\[
-N_1 = \overline{AB},\quad
-N_2 = \overline{A N_1},\quad
-N_3 = \overline{B N_1},\quad
+$$
+N_1 = \overline{AB}
+$$
+
+$$
+N_2 = \overline{A N_1}
+$$
+
+$$
+N_3 = \overline{B N_1}
+$$
+
+$$
 Y = \overline{N_2N_3}
-\]
+$$
 
 This produces a logic high when the two inputs are different.
 
@@ -197,9 +206,9 @@ This produces a logic high when the two inputs are different.
 
 A 2:1 MUX selects one of two data inputs based on a select signal. Its Boolean equation is:
 
-\[
+$$
 Y = \overline{SEL}\,A + SEL\,B
-\]
+$$
 
 The supplied transistor-level schematic uses complementary select controls and PMOS/NMOS transmission paths, with an inverter generating the complementary select signal.
 
@@ -226,27 +235,27 @@ The supplied transistor-level schematic uses complementary select controls and P
 
 The circuit first computes the intermediate term:
 
-\[
-P=A\oplus B
-\]
+$$
+P = A \oplus B
+$$
 
 The first XOR output is connected to one input of the second XOR. The carry-in `C` is connected to the other input of the second XOR, producing:
 
-\[
-SUM=P\oplus C
-\]
+$$
+SUM = P \oplus C
+$$
 
 The same intermediate signal `P` drives the MUX select input. The MUX data inputs are `A` and `C`, so:
 
-\[
-CARRY=\overline{P}A+PC
-\]
+$$
+CARRY = \overline{P}A + PC
+$$
 
 Since `P=0` means `A=B`, and `P=1` means `A\ne B`, this MUX expression is equivalent to:
 
-\[
-CARRY=AB+C(A\oplus B)
-\]
+$$
+CARRY = AB + C(A \oplus B)
+$$
 
 ### 5.1 Full-adder truth table
 
@@ -261,7 +270,7 @@ CARRY=AB+C(A\oplus B)
 | 1 | 1 | 0 | 0 | 1 |
 | 1 | 1 | 1 | 1 | 1 |
 
-The truth table contains all \(2^3=8\) possible input combinations. `SUM` is the odd-parity bit of the three inputs, while `CARRY` is high whenever at least two of the three inputs are high.
+The truth table contains all $2^3 = 8$ possible input combinations. `SUM` is the odd-parity bit of the three inputs, while `CARRY` is high whenever at least two of the three inputs are high.
 
 ## 6. Testbench and Simulation
 
