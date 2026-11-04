@@ -337,7 +337,7 @@ The design equations and truth table provide the functional reference for verifi
 ## 10. Project Contents
 
 ```text
-cmos_full_adder_project/
+CMOS-Full-Adder-Design/
 ├── README.md
 └── images/
     ├── full_adder_schematic.png
